@@ -7,15 +7,17 @@
 import urllib.parse as parse
 import urllib.request as request
 
-#client id, client secret 키 가져오기 (naver developers 페이지의 application 확인)
+#0. client id, client secret 키 가져오기 (naver developers 페이지의 application 확인)
 client_id = 'Client ID'
 client_secret = 'Client Secret'
+
 #1. 검색어 입력받기
 query = input('검색어를 입력하세요? ')
 
 #2. url에 쿼리 스트링 전달
 url = f'https://openapi.naver.com/v1/search/news.json?{parse.urlencode({'query':query})}'
 print(url)
+
 #3. 요청 보내기
 req = request.Request(url, headers={'X-Naver-Client-Id':client_id, 'X-Naver-Client-Secret':client_secret})
 resp = request.urlopen(req)

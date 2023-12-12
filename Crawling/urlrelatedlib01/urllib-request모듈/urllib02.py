@@ -19,7 +19,7 @@ url = 'https://images.pexels.com/photos/3081487/pexels-photo-3081487.jpeg?auto=c
 req = request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
 res = request.urlopen(req)
 binary = res.read() #이미지 읽기
-with open('landscape1.jpeg','wb') as f:#이미지 파일 읽기 (이미지 파일이므로 바이너리 타입으로 읽어와야 함)
+with open('landscape1.jpeg', 'wb') as f:#이미지 파일 읽기 (이미지 파일이므로 바이너리 타입으로 읽어와야 함)
     f.write(binary) #읽어온 데이터를 파일에 저장
 
 #방법2 urlretrieve()함수 사용----------------------------------------------
@@ -27,4 +27,4 @@ with open('landscape1.jpeg','wb') as f:#이미지 파일 읽기 (이미지 파�
 opener = request.build_opener()#opener객체 생성
 opener.addheaders = [('User-agent', 'Mozilla/5.0')]#요청 헤더 값 설정
 request.install_opener(opener)#바뀐 헤더 정보 적용
-request.urlretrieve(url,filename='landscape2.jpeg')
+request.urlretrieve(url, filename='landscape2.jpeg')

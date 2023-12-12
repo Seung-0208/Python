@@ -29,7 +29,7 @@ encoded_query = parse.quote_plus(query)#한글로 입력된 검색어를 인코�
 url = f'https://www.google.com/search?q={encoded_query}' #입력받은 검색어를 url에 쿼리스트링으로 전달
 req = request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
 res = request.urlopen(req) #생성된 Request객체 전달
-with open('google.html','w',encoding='utf8') as f:
+with open('google.html', 'w', encoding='utf8') as f:
     f.write(res.read().decode())
 
 #추가) parse 모듈 함수 사용해보기---------------------------------------------
@@ -41,5 +41,5 @@ print(parse.urlunsplit(urls))
 url = f'https://www.google.com/search?{parse.urlencode({'q':query,'oq':query})}'
 req = request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
 res = request.urlopen(req)
-with open('google_.html','w', encoding='utf8') as f:
+with open('google_.html', 'w', encoding='utf8') as f:
     f.write(res.read().decode())

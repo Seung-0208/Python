@@ -29,7 +29,7 @@ source = res.read().decode()
 print(source)
 
 #파일에 저장하기
-with open('daum_urlopen.html','w',encoding='utf8') as f:
+with open('daum_urlopen.html', 'w', encoding='utf8') as f:
     f.write(source)
 
 #방법2 urlretrieve()함수 사용----------------------------------------------
