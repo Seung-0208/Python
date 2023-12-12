@@ -37,7 +37,7 @@ urls = parse.urlsplit(url) #parse.urlsplit() : url을 각 부분으로 나누기
 print(urls) #SplitResult(scheme='https', netloc='www.google.com', path='/search', query='q=%EB%89%B4%EC%A7%84%EC%8A%A4', fragment='')
 print(parse.urlunsplit(urls))
 
-#방법2 urlencode(딕셔너리)함수 사용-------------------------------------------
+#방법2 urlencode(딕셔너리)함수 사용--------------------------------------------
 url = f'https://www.google.com/search?{parse.urlencode({'q':query,'oq':query})}'
 req = request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
 res = request.urlopen(req)
