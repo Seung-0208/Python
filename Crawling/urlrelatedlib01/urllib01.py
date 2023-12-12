@@ -1,4 +1,3 @@
-#
 '''
 [urllib.request 모듈 사용해서 웹 상의 데이터 읽어오기]
 - 방법1) urlopen() 함수 사용
@@ -13,6 +12,7 @@
 '''
 import urllib.request as request
 #방법1 urlopen()함수 사용---------------------------------------------------
+
 res = request.urlopen('https://www.daum.net/') #daum페이지의 데이터 크롤링
 
 #반환값에 대한 기본 정보
@@ -33,6 +33,7 @@ with open('daum_urlopen.html','w',encoding='utf8') as f:
     f.write(source)
 
 #방법2 urlretrieve()함수 사용----------------------------------------------
+
 tuple_ = request.urlretrieve(url='https://www.daum.net/', filename='daum_urlretrieve.html')
 print(tuple_) #urlretrieve함수의 반환값 확인
 print(tuple_[1].items()) #반환값으로 받는 튜플의 두번째 인자가 응답헤더임을 확인
