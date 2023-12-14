@@ -7,3 +7,5 @@ https://jsonplaceholder.typicode.com/photos
 '''
 
 import requests
+
+res = None
