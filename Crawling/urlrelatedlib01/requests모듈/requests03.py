@@ -7,5 +7,5 @@ https://jsonplaceholder.typicode.com/photos
 '''
 
 import requests
-
-res = None
+res = requests.get('https://jsonplaceholder.typicode.com/photos')
+print(res.text)
