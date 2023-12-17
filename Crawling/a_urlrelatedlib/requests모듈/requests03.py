@@ -3,6 +3,7 @@
 https://jsonplaceholder.typicode.com/photos - json을 요소로 갖는 리스트가 저장되어 있음
 - 위의 url로 요청 보내기 -> json 형태의 문자열이 반환됨
 - json() : requests 모듈에 내장된, json형태의 문자열을 파이썬의 리스트 형태로 디코딩해주는 함수
+    - dict 타입을 요소로 갖는 리스트를 반환
     -> import json 불필요
 '''
 
