@@ -17,8 +17,8 @@ import requests
 import csv
 
 #0. client id, client secret 키 가져오기 (naver developers 페이지의 application 확인)
-client_id = "sM2rl8g11O1ZIPlSTYg4"
-client_secret = "FCDdCIgJ5M"
+client_id = "Client ID"
+client_secret = "Client Secret"
 
 #1. 검색어 입력받기
 query = input('검색어를 입력하세요? ')
